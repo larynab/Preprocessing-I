@@ -104,6 +104,9 @@ nav,
 section {
   display: block;
 }
+/* Variables */
+/* Mix-in */
+/*Main*/
 body {
   line-height: 1;
 }
@@ -126,12 +129,77 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-/* Set every element's box-sizing to border-box */
 * {
   box-sizing: border-box;
 }
 html,
 body {
   height: 100%;
-  background-color: red;
+}
+.main {
+  color: black;
+}
+@media (max-width: 500px) {
+  .main {
+    width: 100%;
+  }
+}
+/*Start of body*/
+nav {
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+}
+nav a {
+  margin: 10px;
+  text-decoration: none;
+}
+.name {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 800px;
+  margin: 0 auto;
+}
+@media (max-width: 500px) {
+  .name {
+    width: 100%;
+  }
+}
+.name img {
+  width: 500px;
+  margin: 0 auto;
+}
+.name h1 {
+  font-size: 3em;
+}
+.name h2 {
+  margin: 10px 0;
+}
+.name line {
+  border: 3px solid red;
+  width: 80%;
+}
+.name p {
+  margin: 20px;
+}
+.name button {
+  margin-bottom: 20px;
+}
+.name button a {
+  font-size: 30px;
+}
+.skills {
+  padding: 10px 0;
+  margin: 10px 0;
+  border: 1px solid black;
+}
+.work {
+  padding: 10px 0;
+  margin: 10px 0;
+  border: 1px solid black;
 }

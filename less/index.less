@@ -24,37 +24,124 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+
+
+/* Variables */
+@border-highlight: 1px solid black;
+@main-letter-color: black;
+
+/* Mix-in */
+.center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bordered() {
+  padding: 10px 0;
+  margin: 10px 0;
+}
+
+/*Main*/
 body {
 	line-height: 1;
 }
+
 ol, ul {
 	list-style: none;
 }
+
 blockquote, q {
 	quotes: none;
 }
+
 blockquote:before, blockquote:after,
 q:before, q:after {
 	content: '';
 	content: none;
 }
+
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-
-/* Set every element's box-sizing to border-box */
 * {
     box-sizing: border-box;
 }
 
 html, body {
     height: 100%;
-	background-color: red;
+	
+}
+
+.main {
+	
+	color: @main-letter-color;
+	
+  @media(max-width: 500px) {
+		width: 100%;
+	}
+}
+
+/*Start of body*/
+nav {
+	border: @border-highlight;
+	.center;
+	height: 30px;
+  a {
+	margin: 10px;
+	text-decoration: none;
+ }	
+}
+
+.name {
+	border: @border-highlight;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	width: 800px;
+	margin: 0 auto;
+	@media(max-width: 500px) {
+		width:100%
+	} 
+  img {
+	width: 500px;
+	margin: 0 auto;
+}
+  h1 {
+	  font-size: 3em;
+  }
+  h2 {
+	  margin: 10px 0;
+  }
+  line {
+	  border: 3px solid red;
+	  width: 80%;
+  }
+  p {
+	  margin: 20px;
+  }
+  button {
+	  a {
+		  font-size: 30px;
+	  }
+	  margin-bottom: 20px;
+  }
+}
+.skills {
+	.bordered;
+	border: @border-highlight;
+
+}
+
+.work {
+	.bordered;
+	border: @border-highlight;
 }
 
