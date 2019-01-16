@@ -113,6 +113,10 @@ nav {
   img {
 	width: 500px;
 	margin: 0 auto;
+	@media(max-width: 500px) {
+		width: 400px;
+		height: 500px;
+	}
 }
   h1 {
 	  font-size: 3em;
@@ -135,8 +139,17 @@ nav {
   }
 }
 .skills {
+	display: flex;
 	.bordered;
 	border: @border-highlight;
+	flex-direction: row;
+	justify-content: space-around;
+ section {
+	 .bordered;
+	 border: @border-highlight;
+	width: 45%;
+	margin: 0 10px;
+ }
 
 }
 
